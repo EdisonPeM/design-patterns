@@ -1,0 +1,12 @@
+#app {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr);
+
+  .app-content {
+    height: 100%;
+  }
+}
