@@ -1,4 +1,5 @@
-import { Route, Switch, Link, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
+import NavLink from "../NavLink";
 
 import styles from "./styles.scss";
 
@@ -13,12 +14,14 @@ function PatternCategory({ title, basePath, routes }) {
             ({ path, label }) =>
               label && (
                 <li key={path} className={styles["category__sidenav__item"]}>
-                  <Link
+                  <NavLink
+                    exact
                     to={`${basePath}${path}`}
                     className={styles["category__sidenav__link"]}
+                    activeClassName={styles["category__sidenav__link--active"]}
                   >
-                    {label}
-                  </Link>
+                    <span>{label}</span>
+                  </NavLink>
                 </li>
               )
           )}

@@ -15,6 +15,7 @@
   .category__sidenav {
     padding: 1rem 0;
     background-color: #f6f6f6;
+    border: 1px solid #eee;
 
     .category__sidenav__list {
       margin: 0;
@@ -24,23 +25,39 @@
       .category__sidenav__link {
         display: block;
         padding: 1rem;
+        width: 100%;
         text-decoration: none;
 
         color: #191919;
         border-bottom: 5px solid transparent;
 
-        &::after {
-          content: "";
-          display: block;
-          margin-top: 4px;
-          width: 0;
-          height: 5px;
-          background-color: #ccc;
-          transition: 300ms;
+        & > span {
+          position: relative;
         }
 
-        &:hover::after {
+        & > span::after {
+          content: "";
+          display: block;
+          position: absolute;
+          margin-top: 4px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 3px;
+          background-color: #666;
+          transition: width 200ms;
+        }
+
+        &:hover > span::after {
           width: 100%;
+        }
+
+        &.category__sidenav__link--active {
+          font-weight: bold;
+
+          & > span::after {
+            background-color: #191919;
+          }
         }
       }
     }
