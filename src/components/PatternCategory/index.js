@@ -30,8 +30,9 @@ function PatternCategory({ title, basePath, routes }) {
       <div className={styles["category__content"]}>
         <h2 className={styles["category__title"]}>{title}</h2>
         <Switch>
-          {routes.map(({ path, component: Component }) => (
+          {routes.map(({ path, component: Component, exact }) => (
             <Route
+              exact={exact}
               key={path}
               path={`${basePath}${path}`}
               component={Component}

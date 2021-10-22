@@ -1,6 +1,37 @@
 import PatternCategory from "../../components/PatternCategory";
 
-const PATRONES_CREACIONALES = [];
+const PATRONES_CREACIONALES = [
+  {
+    path: "/",
+    exact: true,
+    component: () => <h3>{"Creacionales Home"}</h3>,
+  },
+  {
+    path: "/factory-method",
+    label: "Factory Method",
+    component: () => <h3>{"Factory Method"}</h3>,
+  },
+  {
+    path: "/abstract-factory",
+    label: "Abstract Factory",
+    component: () => <h3>{"Abstract Factory"}</h3>,
+  },
+  {
+    path: "/builder",
+    label: "Builder",
+    component: () => <h3>{"Builder"}</h3>,
+  },
+  {
+    path: "/prototype",
+    label: "Prototype",
+    component: () => <h3>{"Prototype"}</h3>,
+  },
+  {
+    path: "/singleton",
+    label: "Singleton",
+    component: () => <h3>{"Singleton"}</h3>,
+  },
+];
 
 function Creacionales({ match: { path } }) {
   return (
