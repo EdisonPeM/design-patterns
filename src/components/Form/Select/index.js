@@ -1,5 +1,5 @@
 function Select({
-  label = '',
+  label = "",
   options = [],
   value = "",
   onChange = () => {},
@@ -8,6 +8,7 @@ function Select({
   return (
     <label>
       <span>{label}</span>
+      <br />
       <select value={value} onChange={onChange} {...otherProps}>
         {options.map(({ label, value }) => (
           <option key={value} value={value}>
