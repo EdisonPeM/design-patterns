@@ -3,7 +3,7 @@ import { Form, Input, Button, Select } from "../../../components/Form";
 import useForceUpdate from "../../../hooks/useForceUpdate";
 
 import useInput from "../../../hooks/useInput";
-import { LOGGER_TYPES } from "../../../models/FactoryMethod";
+import { LOGGER_TYPES } from "../../../models/Creacionales/FactoryMethod";
 
 import { changeLogger, logValue, clearLogs } from "./controller";
 

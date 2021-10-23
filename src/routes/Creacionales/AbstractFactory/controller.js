@@ -1,7 +1,7 @@
 import {
   VEHICLE_TYPES,
   AbstractVehicleFactory,
-} from "../../../models/AbstractFactory";
+} from "../../../models/Creacionales/AbstractFactory";
 
 export function SearchVehicle(category, type) {
   const vehicleFactory = AbstractVehicleFactory.getVehicleFactory(category);

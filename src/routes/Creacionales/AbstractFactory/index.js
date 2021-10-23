@@ -3,7 +3,7 @@ import useInput from "../../../hooks/useInput";
 
 import { Form, Select, Button } from "../../../components/Form";
 
-import { FACTORY_TYPES, VEHICLE_TYPES } from "../../../models/AbstractFactory";
+import { FACTORY_TYPES, VEHICLE_TYPES } from "../../../models/Creacionales/AbstractFactory";
 import { SearchVehicle } from "./controller";
 
 // Options
