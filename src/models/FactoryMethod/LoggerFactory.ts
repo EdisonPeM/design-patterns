@@ -9,7 +9,7 @@ export const LOGGER_TYPES = {
 
 class LoggerFactory {
   //Factory Method
-  public getLogger(type: keyof typeof LOGGER_TYPES): Logger {
+  static getLogger(type: keyof typeof LOGGER_TYPES): Logger {
     switch (type) {
       case LOGGER_TYPES.CONSOLE: {
         return new ConsoleLogger();

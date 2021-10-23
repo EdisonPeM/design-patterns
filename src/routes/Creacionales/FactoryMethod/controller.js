@@ -1,11 +1,10 @@
 import LoggerFactory from "../../../models/FactoryMethod";
 
-const factory = new LoggerFactory();
-let logger = factory.getLogger();
+let logger = LoggerFactory.getLogger();
 
 export function changeLogger(type) {
   logger.clear();
-  logger = factory.getLogger(type);
+  logger = LoggerFactory.getLogger(type);
 }
 
 export function logValue(value, updateState) {

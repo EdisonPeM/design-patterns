@@ -1,10 +1,10 @@
 import {
   VEHICLE_TYPES,
-  getVehicleFactory,
+  AbstractVehicleFactory,
 } from "../../../models/AbstractFactory";
 
 export function SearchVehicle(category, type) {
-  const vehicleFactory = getVehicleFactory(category);
+  const vehicleFactory = AbstractVehicleFactory.getVehicleFactory(category);
   switch (type) {
     case VEHICLE_TYPES.CAR: {
       const car = vehicleFactory.getCar();

@@ -56,7 +56,7 @@ function AbstractFactory() {
     <article>
       <h3>Abstract Factory</h3>
       <Form onSubmit={search}>
-        <div>
+        <div style="margin-bottom: 1rem;">
           <Select
             autoFocus
             label="Vehicle Category"
@@ -64,7 +64,7 @@ function AbstractFactory() {
             {...category}
           />
         </div>
-        <div>
+        <div style="margin-bottom: 1rem;">
           <Select label="Vehicle Type" options={TYPE_OPTIONS} {...type} />
         </div>
 
