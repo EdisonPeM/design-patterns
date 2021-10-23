@@ -1,20 +1,16 @@
 import { useState } from "preact/hooks";
-import { Form, Input, Button, Select } from "../../../components/Form";
+import useInput from "../../../hooks/useInput";
 import useForceUpdate from "../../../hooks/useForceUpdate";
 
-import useInput from "../../../hooks/useInput";
+import { Form, Input, Button, Select } from "../../../components/Form";
+
 import { LOGGER_TYPES } from "../../../models/Creacionales/FactoryMethod";
+import mapTypesToOptions from "../../../utils/mapTypesToOptions";
 
 import { changeLogger, logValue, clearLogs } from "./controller";
 
 // Options
-const LOGGER_OPTIONS = Object.values(LOGGER_TYPES).map((type) => ({
-  value: type,
-  label: type.toLocaleLowerCase(),
-}));
-
-// Default Value
-const defaultLogger = LOGGER_OPTIONS[0].value;
+const [LOGGER_OPTIONS, defaultLogger] = mapTypesToOptions(LOGGER_TYPES);
 
 // Component
 function FactoryMethod() {

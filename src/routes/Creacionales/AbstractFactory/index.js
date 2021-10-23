@@ -3,23 +3,17 @@ import useInput from "../../../hooks/useInput";
 
 import { Form, Select, Button } from "../../../components/Form";
 
-import { FACTORY_TYPES, VEHICLE_TYPES } from "../../../models/Creacionales/AbstractFactory";
+import {
+  FACTORY_TYPES,
+  VEHICLE_TYPES,
+} from "../../../models/Creacionales/AbstractFactory";
+import mapTypesToOptions from "../../../utils/mapTypesToOptions";
+
 import { SearchVehicle } from "./controller";
 
-// Options
-const CATEGORY_OPTIONS = Object.values(FACTORY_TYPES).map((type) => ({
-  label: type.toLowerCase(),
-  value: type,
-}));
-
-const TYPE_OPTIONS = Object.values(VEHICLE_TYPES).map((type) => ({
-  label: type.toLowerCase(),
-  value: type,
-}));
-
-// Default Values
-const defaultCategory = CATEGORY_OPTIONS[0].value;
-const defaultType = TYPE_OPTIONS[0].value;
+// Options & default Values
+const [CATEGORY_OPTIONS, defaultCategory] = mapTypesToOptions(FACTORY_TYPES);
+const [TYPE_OPTIONS, defaultType] = mapTypesToOptions(VEHICLE_TYPES);
 
 // Component
 function AbstractFactory() {
