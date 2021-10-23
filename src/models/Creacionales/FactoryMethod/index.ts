@@ -1,4 +1,1 @@
-import LoggerFactory from "./LoggerFactory";
-export default LoggerFactory;
-
-export { LOGGER_TYPES } from "./LoggerFactory";
+export { default as LoggerFactory, LOGGER_TYPES } from "./LoggerFactory";
