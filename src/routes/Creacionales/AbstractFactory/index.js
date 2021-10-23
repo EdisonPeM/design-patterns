@@ -1,7 +1,7 @@
 import { useState } from "preact/hooks";
 import useInput from "../../../hooks/useInput";
 
-import { Select, Button } from "../../../components/Form";
+import { Form, Select, Button } from "../../../components/Form";
 
 import { FACTORY_TYPES, VEHICLE_TYPES } from "../../../models/AbstractFactory";
 import { SearchVehicle } from "./controller";
@@ -46,8 +46,7 @@ function AbstractFactory() {
   };
 
   // Controller Call
-  const search = (ev) => {
-    ev.preventDefault();
+  const search = () => {
     const result = SearchVehicle(category.value, type.value);
     setOutput(result);
   };
@@ -56,7 +55,7 @@ function AbstractFactory() {
   return (
     <article>
       <h3>Abstract Factory</h3>
-      <form onSubmit={search}>
+      <Form onSubmit={search}>
         <div>
           <Select
             autoFocus
@@ -78,7 +77,7 @@ function AbstractFactory() {
         </Button>
 
         {output && <p>{output}</p>}
-      </form>
+      </Form>
     </article>
   );
 }
