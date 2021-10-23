@@ -49,6 +49,7 @@
           transition: width 200ms;
         }
 
+        &:focus > span::after,
         &:hover > span::after {
           width: 100%;
         }
