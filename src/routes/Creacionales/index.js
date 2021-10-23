@@ -1,5 +1,7 @@
 import PatternCategory from "../../components/PatternCategory";
 
+import FactoryMethod from "./FactoryMethod";
+
 const PATRONES_CREACIONALES = [
   {
     path: "/",
@@ -9,7 +11,7 @@ const PATRONES_CREACIONALES = [
   {
     path: "/factory-method",
     label: "Factory Method",
-    component: () => <h3>{"Factory Method"}</h3>,
+    component: FactoryMethod,
   },
   {
     path: "/abstract-factory",
