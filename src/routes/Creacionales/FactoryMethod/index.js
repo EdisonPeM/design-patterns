@@ -1,4 +1,4 @@
-import { useEffect, useState } from "preact/hooks";
+import { useState } from "preact/hooks";
 import { Form, Input, Button, Select } from "../../../components/Form";
 import useForceUpdate from "../../../hooks/useForceUpdate";
 
