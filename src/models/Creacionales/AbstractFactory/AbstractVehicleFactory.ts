@@ -8,7 +8,9 @@ export const FACTORY_TYPES = {
   NON_LUXURY_VEHICLE: "NON LUXURY",
 };
 
-// Factory of Factories
+/*
+ * Factory Method Over AbstractFactories
+ */
 class AbstractVehicleFactory {
   static getVehicleFactory(type: keyof typeof FACTORY_TYPES): VehicleFactory {
     switch (type) {

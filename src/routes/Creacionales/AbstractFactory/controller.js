@@ -5,6 +5,9 @@ import {
 
 export function SearchVehicle(category, type) {
   const vehicleFactory = AbstractVehicleFactory.getVehicleFactory(category);
+
+  // Little function similar to Factory Method
+  //  is not a Factory Method because the implementation is more than just creation
   switch (type) {
     case VEHICLE_TYPES.CAR: {
       const car = vehicleFactory.getCar();
