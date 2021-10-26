@@ -4,13 +4,15 @@ import useForceUpdate from "../../../hooks/useForceUpdate";
 
 import { Form, Input, Button, Select } from "../../../components/Form";
 
-import { LOGGER_TYPES } from "../../../models/Creacionales/FactoryMethod";
+import { LoggerFactory } from "../../../models/Creacionales/FactoryMethod";
 import mapTypesToOptions from "../../../utils/mapTypesToOptions";
 
 import { changeLogger, logValue, clearLogs } from "./controller";
 
 // Options
-const [LOGGER_OPTIONS, defaultLogger] = mapTypesToOptions(LOGGER_TYPES);
+const [LOGGER_OPTIONS, defaultLogger] = mapTypesToOptions(
+  LoggerFactory.LOGGER_TYPES
+);
 
 // Component
 function FactoryMethod() {

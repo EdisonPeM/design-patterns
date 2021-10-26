@@ -1,1 +1,1 @@
-export { default as LoggerFactory, LOGGER_TYPES } from "./LoggerFactory";
+export { default as LoggerFactory } from "./LoggerFactory";
