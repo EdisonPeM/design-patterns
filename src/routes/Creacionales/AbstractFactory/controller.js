@@ -1,22 +1,22 @@
 import {
-  VEHICLE_TYPES,
-  AbstractVehicleFactory,
+  VehicleFactory,
+  VehicleFactoryProvider,
 } from "../../../models/Creacionales/AbstractFactory";
 
 export function SearchVehicle(category, type) {
-  const vehicleFactory = AbstractVehicleFactory.getVehicleFactory(category);
+  const vehicleFactory = VehicleFactoryProvider.getVehicleFactory(category);
 
   // Little function similar to Factory Method
   //  is not a Factory Method because the implementation is more than just creation
   switch (type) {
-    case VEHICLE_TYPES.CAR: {
+    case VehicleFactory.VEHICLE_TYPES.CAR: {
       const car = vehicleFactory.getCar();
       const carName = car.getCarName();
       const carFeatures = car.getCarFeatures();
       return `Name: ${carName}, Features: ${carFeatures}`;
     }
 
-    case VEHICLE_TYPES.SUV: {
+    case VehicleFactory.VEHICLE_TYPES.SUV: {
       const suv = vehicleFactory.getSUV();
       const suvName = suv.getSUVName();
       const suvFeatures = suv.getSUVFeatures();

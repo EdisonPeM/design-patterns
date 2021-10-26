@@ -1,9 +1,2 @@
-export {
-  default as AbstractVehicleFactory,
-  FACTORY_TYPES,
-} from "./AbstractVehicleFactory";
-
-export const VEHICLE_TYPES = {
-  CAR: "CAR",
-  SUV: "SUV",
-};
+export { default as VehicleFactoryProvider } from "./VehicleFactoryProvider";
+export { default as VehicleFactory } from "./VehicleFactory";

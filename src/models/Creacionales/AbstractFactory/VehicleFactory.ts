@@ -1,9 +1,14 @@
-import Car from "./Car";
-import SUV from "./SUV";
+import type Car from "./Car";
+import type SUV from "./SUV";
 
-interface VehicleFactory {
-  getCar(): Car;
-  getSUV(): SUV;
+abstract class VehicleFactory {
+  static VEHICLE_TYPES = {
+    CAR: "CAR",
+    SUV: "SUV",
+  };
+
+  abstract getCar(): Car;
+  abstract getSUV(): SUV;
 }
 
 export default VehicleFactory;

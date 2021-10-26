@@ -1,6 +1,6 @@
-import VehicleFactory from "./VehicleFactory";
-import Car from "./Car";
-import SUV from "./SUV";
+import type VehicleFactory from "./VehicleFactory";
+import type Car from "./Car";
+import type SUV from "./SUV";
 
 import NonLuxuryCar from "./NonLuxuryCar";
 import NonLuxurySUV from "./NonLuxurySUV";
