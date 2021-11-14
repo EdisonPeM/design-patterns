@@ -25,7 +25,7 @@ function getBuilder(type) {
 }
 
 const Chef = new PizzaChef();
-export function cookPizza(recibeType, pizzaType) {
+export function cookPizza(recibeType, pizzaType, ingredients) {
   Chef.setBuilder(getBuilder(recibeType));
 
   switch (pizzaType) {
@@ -41,23 +41,12 @@ export function cookPizza(recibeType, pizzaType) {
       return Chef.cookChickenPizza();
     }
 
+    case PizzaType.CUSTOM: {
+      return Chef.cookCustomPizza(ingredients);
+    }
+
     default: {
       throw new Error("No Pizza Type is supported");
     }
   }
-}
-
-export function cookCustomPizza(recibeType, ingredients) {
-  const builder = getBuilder(recibeType);
-  const order = builder.prepareOrder(PizzaType.CUSTOM);
-
-  const { cheese, tomato, pineapple, meat, chicken, mushroom } = ingredients;
-  if (cheese) order.addCheese();
-  if (tomato) order.addTomato();
-  if (pineapple) order.addPinneaple();
-  if (meat) order.addMeat();
-  if (chicken) order.addCheese();
-  if (mushroom) order.addMushroom();
-
-  return order.build();
 }

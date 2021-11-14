@@ -45,13 +45,7 @@ function Builder() {
 
   // Controller Call
   const createPizza = () => {
-    let pizza;
-    if (isCustom) {
-      pizza = cookCustomPizza(builder.value, ingredients);
-    } else {
-      pizza = cookPizza(builder.value, pizzaType.value);
-    }
-
+    const pizza = cookPizza(builder.value, pizzaType.value, ingredients);
     setOutput(JSON.stringify(pizza, null, 2));
   };
 

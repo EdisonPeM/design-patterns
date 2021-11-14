@@ -38,6 +38,20 @@ class PizzaChef {
       .addMushroom()
       .build();
   }
+
+  public cookCustomPizza(ingredients: Record<string, boolean>): Pizza {
+    const order = this.builder.prepareOrder(PizzaType.CUSTOM);
+
+    const { cheese, tomato, pineapple, meat, chicken, mushroom } = ingredients;
+    if (cheese) order.addCheese();
+    if (tomato) order.addTomato();
+    if (pineapple) order.addPinneaple();
+    if (meat) order.addMeat();
+    if (chicken) order.addCheese();
+    if (mushroom) order.addMushroom();
+
+    return order.build();
+  }
 }
 
 export default PizzaChef;
