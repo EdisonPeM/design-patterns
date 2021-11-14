@@ -23,7 +23,7 @@ function Builder() {
   // View
   return (
     <article>
-      <h3>Builder</h3>
+      <h3>Builder - Constructor</h3>
       <Form onSubmit={generateReport}>
         <div style="margin-bottom: 1rem;">
           <Select

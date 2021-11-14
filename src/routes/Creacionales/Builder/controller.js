@@ -9,25 +9,27 @@ export const BUILDER_TYPES = {
   BUILDER_TEL: "Complex Theory",
 };
 
-export function build(type) {
+// Factory Method
+function getBuilder(type) {
   switch (type) {
     case BUILDER_TYPES.BUILDER_SE: {
-      const builder = new ReportBuilderSE();
-      const reportDirector = new ReportDirector(builder);
-      reportDirector.buildReport();
-      const report = reportDirector.getReport();
-      return getReport(report);
+      return new ReportBuilderSE();
     }
 
     case BUILDER_TYPES.BUILDER_TEL:
     default: {
-      const builder = new ReportBuilderTEL();
-      const reportDirector = new ReportDirector(builder);
-      reportDirector.buildReport();
-      const report = reportDirector.getReport();
-      return getReport(report);
+      return new ReportBuilderTEL();
     }
   }
+}
+
+export function build(type) {
+  const builder = getBuilder(type);
+  const reportDirector = new ReportDirector(builder);
+
+  reportDirector.buildReport();
+  const report = reportDirector.getReport();
+  return getReport(report);
 }
 
 function getReport(report) {
