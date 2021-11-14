@@ -9,6 +9,7 @@ function Select({
     <label>
       <span>{label}</span>
       <br />
+      <br />
       <select value={value} onChange={onChange} {...otherProps}>
         {options.map(({ label, value }) => (
           <option key={value} value={value}>

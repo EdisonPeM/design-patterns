@@ -1,9 +1,9 @@
-function Input({ label, value, onChange, ...otherProps }) {
+function Input({ type = "text", label, value, onChange, ...otherProps }) {
   return (
     <label>
       <span>{label}</span>
       <br />
-      <input value={value} onChange={onChange} {...otherProps} />
+      <input type={type} value={value} onChange={onChange} {...otherProps} />
     </label>
   );
 }

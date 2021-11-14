@@ -1,6 +1,6 @@
 function Button({ onClick, children, ...buttonProps }) {
   return (
-    <button onClick={onClick} {...buttonProps}>
+    <button style="cursor: pointer" onClick={onClick} {...buttonProps}>
       {children}
     </button>
   );
