@@ -1,8 +1,9 @@
 import PatternCategory from "../../components/PatternCategory";
 
+import FactoryMethod from "./FactoryMethod";
 import AbstractFactory from "./AbstractFactory";
 import Builder from "./Builder";
-import FactoryMethod from "./FactoryMethod";
+import BuilderComplex from "./BuilderComplex";
 
 const PATRONES_CREACIONALES = [
   {
@@ -24,6 +25,11 @@ const PATRONES_CREACIONALES = [
     path: "/builder",
     label: "Builder",
     component: Builder,
+  },
+  {
+    path: "/builder-2",
+    label: "Builder Complex",
+    component: BuilderComplex,
   },
   {
     path: "/prototype",
