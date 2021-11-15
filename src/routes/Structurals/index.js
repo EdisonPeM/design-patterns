@@ -1,10 +1,10 @@
 import PatternCategory from "../../components/PatternCategory";
 
-const PATRONES_ESTRUCTURALES = [
+const STRUCTURAL_PATTERNS = [
   {
     path: "/",
     exact: true,
-    component: () => <h3>{"Estructurales Home"}</h3>,
+    component: () => <h3>{"Structurals Patterns Home"}</h3>,
   },
   {
     path: "/adapter",
@@ -43,14 +43,14 @@ const PATRONES_ESTRUCTURALES = [
   },
 ];
 
-function Estructurales({ match: { path } }) {
+function Structurals({ match: { path } }) {
   return (
     <PatternCategory
-      title="Patrones Estructurales"
+      title="Structural Patterns"
       basePath={path}
-      routes={PATRONES_ESTRUCTURALES}
+      routes={STRUCTURAL_PATTERNS}
     />
   );
 }
 
-export default Estructurales;
+export default Structurals;

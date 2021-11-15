@@ -3,7 +3,7 @@ import {
   ClassicPizzaBuilder,
   EnhancedPizzaBuilder,
   PizzaType,
-} from "../../../models/Creacionales/BuilderComplex";
+} from "../../../models/Creationals/BuilderComplex";
 
 export const BUILDER_TYPES = {
   BUILDER_CLASIC: "Classic",

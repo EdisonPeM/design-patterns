@@ -2,7 +2,7 @@ import {
   ReportDirector,
   ReportBuilderSE,
   ReportBuilderTEL,
-} from "../../../models/Creacionales/Builder";
+} from "../../../models/Creationals/Builder";
 
 export const BUILDER_TYPES = {
   BUILDER_SE: "Software Engineering",

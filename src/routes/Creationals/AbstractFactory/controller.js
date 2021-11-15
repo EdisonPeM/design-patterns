@@ -1,7 +1,7 @@
 import {
   VehicleFactory,
   VehicleFactoryProvider,
-} from "../../../models/Creacionales/AbstractFactory";
+} from "../../../models/Creationals/AbstractFactory";
 
 export function SearchVehicle(category, type) {
   const vehicleFactory = VehicleFactoryProvider.getVehicleFactory(category);

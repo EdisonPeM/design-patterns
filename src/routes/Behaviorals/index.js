@@ -1,10 +1,10 @@
 import PatternCategory from "../../components/PatternCategory";
 
-const PATRONES_COMPORTAMENTALES = [
+const BEHAVIORALS_PATTERNS = [
   {
     path: "/",
     exact: true,
-    component: () => <h3>{"Comportamentales Home"}</h3>,
+    component: () => <h3>{"Behaviorals Patterns Home"}</h3>,
   },
   {
     path: "/interpreter",
@@ -63,14 +63,14 @@ const PATRONES_COMPORTAMENTALES = [
   },
 ];
 
-function Comportamentales({ match: { path } }) {
+function Behaviorals({ match: { path } }) {
   return (
     <PatternCategory
-      title="Patrones Comportamentales"
+      title="Behavioral Patterns"
       basePath={path}
-      routes={PATRONES_COMPORTAMENTALES}
+      routes={BEHAVIORALS_PATTERNS}
     />
   );
 }
 
-export default Comportamentales;
+export default Behaviorals;
