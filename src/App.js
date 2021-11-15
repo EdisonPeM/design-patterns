@@ -12,7 +12,7 @@ import Navbar from "./components/Navbar";
 import Home from "./routes/Home";
 import Creationals from "./routes/Creationals";
 import Structurals from "./routes/Structurals";
-import Comportamentales from "./routes/Comportamentales";
+import Behaviorals from "./routes/Behaviorals";
 
 const App = () => (
   <div id="app">
@@ -24,7 +24,7 @@ const App = () => (
           <Route exact path="/" component={Home} />
           <Route path="/creationals" component={Creationals} />
           <Route path="/structurals" component={Structurals} />
-          <Route path="/comportamentales" component={Comportamentales} />
+          <Route path="/behaviorals" component={Behaviorals} />
 
           {/* 404 returns to Home */}
           <Route path="*">

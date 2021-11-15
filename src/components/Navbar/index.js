@@ -6,7 +6,7 @@ const links = [
   { path: "/", label: "Home", exact: true },
   { path: "/creationals", label: "Creationals" },
   { path: "/structurals", label: "structurals" },
-  { path: "/comportamentales", label: "Comportamentales" },
+  { path: "/behaviorals", label: "Behaviorals" },
 ];
 
 function Navbar() {
