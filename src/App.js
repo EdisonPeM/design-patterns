@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 
 // Code-splitting is automated for `routes` directory
 import Inicio from "./routes/Inicio";
-import Creacionales from "./routes/Creacionales";
+import Creationals from "./routes/Creationals";
 import Estructurales from "./routes/Estructurales";
 import Comportamentales from "./routes/Comportamentales";
 
@@ -22,7 +22,7 @@ const App = () => (
       <main className="app-content">
         <Switch>
           <Route exact path="/" component={Inicio} />
-          <Route path="/creacionales" component={Creacionales} />
+          <Route path="/creationals" component={Creationals} />
           <Route path="/estructurales" component={Estructurales} />
           <Route path="/comportamentales" component={Comportamentales} />
 

@@ -4,7 +4,7 @@ import useForceUpdate from "../../../hooks/useForceUpdate";
 
 import { Form, Input, Button, Select } from "../../../components/Form";
 
-import { LoggerFactory } from "../../../models/Creacionales/FactoryMethod";
+import { LoggerFactory } from "../../../models/Creationals/FactoryMethod";
 import mapTypesToOptions from "../../../utils/mapTypesToOptions";
 
 import { changeLogger, logValue, clearLogs } from "./controller";

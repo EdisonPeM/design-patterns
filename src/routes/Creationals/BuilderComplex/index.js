@@ -4,7 +4,7 @@ import { Button, Form, Input, Select } from "../../../components/Form";
 
 import mapTypesToOptions from "../../../utils/mapTypesToOptions";
 import { BUILDER_TYPES, cookCustomPizza, cookPizza } from "./controller";
-import { PizzaType } from "../../../models/Creacionales/BuilderComplex";
+import { PizzaType } from "../../../models/Creationals/BuilderComplex";
 
 const [BUILDER_OPTIONS, defaultBuilder] = mapTypesToOptions(BUILDER_TYPES);
 const [PIZZA_OPTIONS, defaultPizza] = mapTypesToOptions(PizzaType);

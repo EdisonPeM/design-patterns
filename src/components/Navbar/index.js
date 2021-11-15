@@ -4,7 +4,7 @@ import styles from "./styles.scss";
 
 const links = [
   { path: "/", label: "Inicio", exact: true },
-  { path: "/creacionales", label: "Creacionales" },
+  { path: "/creationals", label: "Creationals" },
   { path: "/estructurales", label: "Estructurales" },
   { path: "/comportamentales", label: "Comportamentales" },
 ];

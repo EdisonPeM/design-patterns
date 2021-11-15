@@ -6,7 +6,7 @@ import { Form, Select, Button } from "../../../components/Form";
 import {
   VehicleFactory,
   VehicleFactoryProvider,
-} from "../../../models/Creacionales/AbstractFactory";
+} from "../../../models/Creationals/AbstractFactory";
 import mapTypesToOptions from "../../../utils/mapTypesToOptions";
 
 import { SearchVehicle } from "./controller";

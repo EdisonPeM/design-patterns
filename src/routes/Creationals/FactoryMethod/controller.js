@@ -1,4 +1,4 @@
-import { LoggerFactory } from "../../../models/Creacionales/FactoryMethod";
+import { LoggerFactory } from "../../../models/Creationals/FactoryMethod";
 
 let logger = LoggerFactory.getLogger();
 

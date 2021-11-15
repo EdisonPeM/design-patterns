@@ -5,11 +5,11 @@ import AbstractFactory from "./AbstractFactory";
 import Builder from "./Builder";
 import BuilderComplex from "./BuilderComplex";
 
-const PATRONES_CREACIONALES = [
+const CREATIONALS_PATTERNS = [
   {
     path: "/",
     exact: true,
-    component: () => <h3>{"Creacionales Home"}</h3>,
+    component: () => <h3>{"Creationals Patterns Home"}</h3>,
   },
   {
     path: "/factory-method",
@@ -43,14 +43,14 @@ const PATRONES_CREACIONALES = [
   },
 ];
 
-function Creacionales({ match: { path } }) {
+function Creationals({ match: { path } }) {
   return (
     <PatternCategory
-      title="Patrones Creacionales"
+      title="Creational Patterns"
       basePath={path}
-      routes={PATRONES_CREACIONALES}
+      routes={CREATIONALS_PATTERNS}
     />
   );
 }
 
-export default Creacionales;
+export default Creationals;
