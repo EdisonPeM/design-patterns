@@ -4,6 +4,7 @@ module.exports = {
       transitionProperty: {
         sizing: "height, width",
         spacing: "margin, padding",
+        position: "top, right, bottom, left",
       },
     },
   },

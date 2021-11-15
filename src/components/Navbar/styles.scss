@@ -1,18 +1,39 @@
 .navbar {
+  @apply text-right;
   @apply text-white bg-blue-500;
-  @apply flex justify-end;
+  @apply flex items-center;
+  @apply pl-10 md:pl-0;
+  @apply overflow-hidden;
 
-  .navbar__link {
-    @apply text-gray-300 no-underline;
-    @apply block p-4;
+  .navbar__icon {
+    @apply ml-auto md:hidden block bg-blue-500;
+  }
 
-    &:focus,
-    &:hover {
-      @apply text-white bg-blue-700;
+  &.navbar--show {
+    .navbar__links {
+      @apply right-0;
+      @apply relative z-10;
     }
+  }
 
-    &.navbar__link--active {
-      @apply text-white;
+  .navbar__links {
+    @apply flex ml-auto;
+    @apply overflow-x-auto;
+    @apply relative -right-full md:right-0;
+    @apply transition-position;
+
+    .navbar__link {
+      @apply text-gray-300 no-underline;
+      @apply p-4 inline-block;
+
+      &:focus,
+      &:hover {
+        @apply text-white bg-blue-700;
+      }
+
+      &.navbar__link--active {
+        @apply text-white;
+      }
     }
   }
 }
