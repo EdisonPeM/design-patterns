@@ -3,7 +3,7 @@ import NavLink from "../NavLink";
 import styles from "./styles.scss";
 
 const links = [
-  { path: "/", label: "Inicio", exact: true },
+  { path: "/", label: "Home", exact: true },
   { path: "/creationals", label: "Creationals" },
   { path: "/estructurales", label: "Estructurales" },
   { path: "/comportamentales", label: "Comportamentales" },
