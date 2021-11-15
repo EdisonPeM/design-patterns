@@ -1,0 +1,23 @@
+.btn {
+  @apply px-2 py-1 rounded-lg shadow-md text-white;
+}
+
+.btn-sm {
+  @apply px-2 py-1;
+}
+
+.btn-lg {
+  @apply px-4 py-2;
+}
+
+.btn-primary {
+  @apply bg-blue-500 hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-gray-500 hover:bg-gray-700;
+}
+
+.btn-success {
+  @apply bg-green-500 hover:bg-green-700;
+}

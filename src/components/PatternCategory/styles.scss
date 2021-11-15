@@ -1,57 +1,88 @@
 .category {
-  width: 100%;
-  height: 100%;
+  @apply w-full h-full;
+  @apply flex;
+  @apply relative;
 
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  .category__icon {
+    @apply md:hidden;
+    @apply absolute z-20 -top-2 text-white;
+    @apply transform;
+    --tw-translate-y: -100%;
+  }
 
   .category__sidenav,
   .category__content {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    @apply w-full h-full;
+    @apply relative;
+  }
+
+  &.category--show {
+    .category__sidenav {
+      @apply left-0 ease-in;
+    }
   }
 
   .category__sidenav {
-    padding: 1rem 0;
-    background-color: #f6f6f6;
+    @apply absolute sm:relative;
+    @apply w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/5 shadow-xl sm:shadow-none;
+    @apply z-10 -left-full sm:left-0;
+    @apply transition-position ease-out duration-300;
+
+    @apply py-4 px-0;
+    @apply overflow-y-auto;
+    @apply bg-gray-100;
+    @apply border border-solid border-gray-200;
 
     .category__sidenav__list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+      @apply m-0 p-0;
+      @apply list-none;
 
       .category__sidenav__link {
-        display: block;
-        padding: 1rem;
-        text-decoration: none;
+        @apply no-underline;
+        @apply block w-full p-4;
+        @apply text-gray-900;
+        @apply border-b-4 border-solid border-transparent;
 
-        color: #191919;
-        border-bottom: 5px solid transparent;
-
-        &::after {
-          content: "";
-          display: block;
-          margin-top: 4px;
-          width: 0;
-          height: 5px;
-          background-color: #ccc;
-          transition: 300ms;
+        & > span {
+          @apply relative;
         }
 
-        &:hover::after {
-          width: 100%;
+        & > span::after {
+          content: "";
+          @apply bg-gray-500;
+          @apply w-0 h-1 block mt-1;
+          @apply absolute left-1/2;
+
+          @apply transform;
+          --tw-translate-x: -50%;
+
+          @apply transition-sizing duration-200 ease-out;
+        }
+
+        &:focus > span::after,
+        &:hover > span::after {
+          @apply w-full;
+        }
+
+        &.category__sidenav__link--active {
+          @apply font-bold;
+
+          & > span::after {
+            @apply bg-gray-900;
+          }
         }
       }
     }
   }
 
   .category__content {
-    padding: 1rem;
+    @apply p-4;
+    @apply w-full sm:w-2/3 lg:w-3/4 m-auto;
   }
 
   .category__title {
-    margin: 0.5rem 0;
-    border-bottom: 1px solid lightgray;
+    @apply my-2 mx-0;
+    @apply border-b border-solid border-gray-300;
+    @apply font-bold uppercase;
   }
 }
