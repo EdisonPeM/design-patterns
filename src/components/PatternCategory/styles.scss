@@ -1,64 +1,55 @@
 .category {
-  width: 100%;
-  height: 100%;
-
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  @apply w-full h-full;
+  @apply grid grid-cols-4;
 
   .category__sidenav,
   .category__content {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    @apply w-full h-full;
+    @apply relative;
   }
 
   .category__sidenav {
-    overflow-y: auto;
-    padding: 1rem 0;
-    background-color: #f6f6f6;
-    border: 1px solid #eee;
+    @apply py-4 px-0;
+    @apply overflow-y-auto;
+    @apply bg-gray-100;
+    @apply border border-solid border-gray-200;
 
     .category__sidenav__list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+      @apply m-0 p-0;
+      @apply list-none;
 
       .category__sidenav__link {
-        display: block;
-        padding: 1rem;
-        width: 100%;
-        text-decoration: none;
-
-        color: #191919;
-        border-bottom: 5px solid transparent;
+        @apply no-underline;
+        @apply block w-full p-4;
+        @apply text-gray-900;
+        @apply border-b-4 border-solid border-transparent;
 
         & > span {
-          position: relative;
+          @apply relative;
         }
 
         & > span::after {
           content: "";
-          display: block;
-          position: absolute;
-          margin-top: 4px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 0;
-          height: 3px;
-          background-color: #666;
-          transition: width 200ms;
+          @apply bg-gray-500;
+          @apply w-0 h-1 block mt-1;
+          @apply absolute left-1/2;
+
+          @apply transform;
+          --tw-translate-x: -50%;
+
+          @apply transition-sizing duration-200 ease-out;
         }
 
         &:focus > span::after,
         &:hover > span::after {
-          width: 100%;
+          @apply w-full;
         }
 
         &.category__sidenav__link--active {
-          font-weight: bold;
+          @apply font-bold;
 
           & > span::after {
-            background-color: #191919;
+            @apply bg-gray-900;
           }
         }
       }
@@ -66,11 +57,13 @@
   }
 
   .category__content {
-    padding: 1rem;
+    @apply p-4;
+    @apply col-span-3;
   }
 
   .category__title {
-    margin: 0.5rem 0;
-    border-bottom: 1px solid lightgray;
+    @apply my-2 mx-0;
+    @apply border-b border-solid border-gray-300;
+    @apply font-bold;
   }
 }

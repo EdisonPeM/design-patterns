@@ -1,24 +1,18 @@
 .navbar {
-  display: flex;
-  justify-content: flex-end;
-  background-color: #3e6bff;
-  color: white;
+  @apply text-white bg-blue-500;
+  @apply flex justify-end;
 
   .navbar__link {
-    display: block;
-    padding: 1rem;
-    color: inherit;
-    text-decoration: none;
-    color: #ffffff80;
+    @apply text-gray-300 no-underline;
+    @apply block p-4;
 
     &:focus,
     &:hover {
-      background-color: #4d76ff;
-      color: #ffffffbf;
+      @apply text-white bg-blue-700;
     }
 
     &.navbar__link--active {
-      color: #ffffff;
+      @apply text-white;
     }
   }
 }

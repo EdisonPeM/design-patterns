@@ -1,11 +1,9 @@
 .header {
-  padding: 1em;
-  text-align: center;
-  background-color: #0d3db8;
-  color: white;
-  text-transform: uppercase;
+  @apply font-bold uppercase text-center;
+  @apply text-white bg-blue-600;
+  @apply p-4 py-5;
 
   h1 {
-    margin: 0;
+    @apply m-0;
   }
 }
