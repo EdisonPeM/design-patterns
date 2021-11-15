@@ -64,6 +64,6 @@
   .category__title {
     @apply my-2 mx-0;
     @apply border-b border-solid border-gray-300;
-    @apply font-bold;
+    @apply font-bold uppercase;
   }
 }

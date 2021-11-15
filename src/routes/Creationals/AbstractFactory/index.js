@@ -53,9 +53,10 @@ function AbstractFactory() {
   // View
   return (
     <article>
-      <h3>Abstract Factory</h3>
+      <h2 class="text-center text-2xl font-bold">Abstract Factory</h2>
+      <br />
       <Form onSubmit={search}>
-        <div style="margin-bottom: 1rem;">
+        <div class="mb-4">
           <Select
             autoFocus
             label="Vehicle Category"
@@ -63,17 +64,20 @@ function AbstractFactory() {
             {...category}
           />
         </div>
-        <div style="margin-bottom: 1rem;">
+        <div class="mb-4">
           <Select label="Vehicle Type" options={TYPE_OPTIONS} {...type} />
         </div>
-
-        <Button type="submit">Search</Button>
-        <Button type="button" onClick={clearOutput}>
-          Clean Search
-        </Button>
-        <Button type="reset" onClick={resetAll}>
-          Reset
-        </Button>
+        <div class="mb-4">
+          <Button variant="success" class="mr-4 mb-2" type="submit">
+            Search
+          </Button>
+          <Button class="mr-4 mb-2" type="button" onClick={clearOutput}>
+            Clean Search
+          </Button>
+          <Button variant="secondary" type="reset" onClick={resetAll}>
+            Reset
+          </Button>
+        </div>
 
         {output && <p>{output}</p>}
       </Form>

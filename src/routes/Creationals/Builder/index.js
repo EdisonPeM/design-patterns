@@ -23,20 +23,23 @@ function Builder() {
   // View
   return (
     <article>
-      <h3>Builder - Constructor</h3>
+      <h2 class="text-center text-2xl font-bold">Builder - Constructor</h2>
+      <br />
       <Form onSubmit={generateReport}>
-        <div style="margin-bottom: 1rem;">
+        <div class="mb-4">
           <Select
             label="Select report type"
             options={BUILDER_OPTIONS}
             {...builder}
           />
         </div>
-        <Button type="submit">Generate a Report</Button>
+        <div class="mb-4">
+          <Button type="submit">Generate a Report</Button>
+        </div>
       </Form>
 
       {output && (
-        <p style={{ overflow: "auto" }}>
+        <p class="overflow-x-auto">
           <pre>{output}</pre>
         </p>
       )}

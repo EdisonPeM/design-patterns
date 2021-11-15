@@ -57,9 +57,11 @@ function FactoryMethod() {
 
   return (
     <article>
-      <h3>Factory Method</h3>
+      <h2 class="text-center text-2xl font-bold">Factory Method</h2>
+      {/* <p></p> // TODO: Add factory method description */}
+      <br />
       <Form onSubmit={log}>
-        <div style="margin-bottom: 1rem;">
+        <div class="mb-4">
           <Select
             label="Change the logger"
             options={LOGGER_OPTIONS}
@@ -67,13 +69,17 @@ function FactoryMethod() {
             onChange={changeLoggerType}
           />
         </div>
-        <div style="margin-bottom: 1rem;">
+        <div class="mb-4">
           <Input autoFocus label="A message to Log" {...message} />
         </div>
-        <Button type="submit">Log</Button>
-        <Button type="button" onClick={clear}>
-          Clear
-        </Button>
+        <div>
+          <Button class="mr-4 mb-2" type="submit">
+            Log
+          </Button>
+          <Button variant="secondary" type="button" onClick={clear}>
+            Clear
+          </Button>
+        </div>
       </Form>
 
       {output && (

@@ -52,41 +52,56 @@ function Builder() {
   // View
   return (
     <article>
-      <h3>Builder</h3>
+      <h2 class="text-center text-2xl font-bold">Builder</h2>
       <br />
       <Form onSubmit={createPizza}>
-        <div style="display: flex; justify-content: space-around">
-          <div style="margin-bottom: 1rem;">
-            <Select
-              label="Select Pizza Type"
-              options={PIZZA_OPTIONS}
-              {...pizzaType}
-            />
-          </div>
-          <div style="margin-bottom: 1rem;">
-            <Select
-              label="Select Recibe type"
-              options={BUILDER_OPTIONS}
-              {...builder}
-            />
-          </div>
+        <div class="mb-4">
+          <Select
+            label="Select Pizza Type"
+            options={PIZZA_OPTIONS}
+            {...pizzaType}
+          />
         </div>
+        <div class="mb-4">
+          <Select
+            label="Select Recibe type"
+            options={BUILDER_OPTIONS}
+            {...builder}
+          />
+        </div>
+
         {isCustom && (
-          <div style="padding: 1rem; display: flex; justify-content: space-around; text-align: center">
-            <Input label="Cheese" type="checkbox" {...getHanlder("cheese")} />
-            <Input label="Tomato" type="checkbox" {...getHanlder("tomato")} />
-            <Input
-              label="Pineapple"
-              type="checkbox"
-              {...getHanlder("pineapple")}
-            />
-            <Input label="Meat" type="checkbox" {...getHanlder("meat")} />
-            <Input label="Chicken" type="checkbox" {...getHanlder("chicken")} />
-            <Input
-              label="Mushroom"
-              type="checkbox"
-              {...getHanlder("mushroom")}
-            />
+          <div class="flex flex-wrap justify-center">
+            <div class="p-4">
+              <Input label="Tomato" type="checkbox" {...getHanlder("tomato")} />
+            </div>
+            <div class="p-4">
+              <Input label="Cheese" type="checkbox" {...getHanlder("cheese")} />
+            </div>
+            <div class="p-4">
+              <Input
+                label="Pineapple"
+                type="checkbox"
+                {...getHanlder("pineapple")}
+              />
+            </div>
+            <div class="p-4">
+              <Input label="Meat" type="checkbox" {...getHanlder("meat")} />
+            </div>
+            <div class="p-4">
+              <Input
+                label="Chicken"
+                type="checkbox"
+                {...getHanlder("chicken")}
+              />
+            </div>
+            <div class="p-4">
+              <Input
+                label="Mushroom"
+                type="checkbox"
+                {...getHanlder("mushroom")}
+              />
+            </div>
           </div>
         )}
         <div style="text-align: center">

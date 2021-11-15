@@ -10,7 +10,7 @@ function Select({
     <label>
       <span class={inline ? "mr-2" : "block mb-2"}>{label}</span>
       <select
-        class="w-full md:w-1/2 lg:w-auto py-1 px-3 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300"
+        class="w-full py-1 px-3 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300"
         value={value}
         onChange={onChange}
         {...otherProps}
