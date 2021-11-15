@@ -11,7 +11,7 @@ import Navbar from "./components/Navbar";
 // Code-splitting is automated for `routes` directory
 import Home from "./routes/Home";
 import Creationals from "./routes/Creationals";
-import Estructurales from "./routes/Estructurales";
+import Structurals from "./routes/Structurals";
 import Comportamentales from "./routes/Comportamentales";
 
 const App = () => (
@@ -23,7 +23,7 @@ const App = () => (
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/creationals" component={Creationals} />
-          <Route path="/estructurales" component={Estructurales} />
+          <Route path="/structurals" component={Structurals} />
           <Route path="/comportamentales" component={Comportamentales} />
 
           {/* 404 returns to Home */}
