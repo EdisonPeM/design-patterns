@@ -1,6 +1,20 @@
-function Button({ onClick, children, ...buttonProps }) {
+import styles from "./styles.scss";
+
+function Button({
+  class: className,
+  size = "sm",
+  onClick,
+  children,
+  ...buttonProps
+}) {
   return (
-    <button style="cursor: pointer" onClick={onClick} {...buttonProps}>
+    <button
+      class={`${styles["btn"]} ${styles["btn-primary"]} ${
+        styles[`btn-${size}`]
+      } ${className || ""}`}
+      onClick={onClick}
+      {...buttonProps}
+    >
       {children}
     </button>
   );
